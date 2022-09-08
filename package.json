@@ -1,0 +1,67 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "React example starter project",
+  "keywords": [
+    "react",
+    "starter"
+  ],
+  "homepage": "https://idea.devlaunchers.com/",
+  "main": "src/index.js",
+  "dependencies": {
+    "@banana-dev/banana-dev": "^3.0.0",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.4",
+    "alight": "^0.14.1",
+    "axios": "^0.21.1",
+    "constate": "^3.3.2",
+    "cors": "^2.8.5",
+    "http-proxy": "^1.18.1",
+    "next": "^12.1.6",
+    "prismjs": "^1.28.0",
+    "prismjs-dark-theme": "^0.0.1",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-burger-menu": "^3.0.8",
+    "react-dom": "17.0.2",
+    "react-modal": "^3.15.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-simple-code-editor": "^0.13.0",
+    "request": "^2.88.2",
+    "rete": "1.4.1",
+    "rete-area-plugin": "0.2.1",
+    "rete-comment-plugin": "^0.7.0-rc.1",
+    "rete-connection-plugin": "0.7.0",
+    "rete-context-menu-plugin": "0.3.7",
+    "rete-module-plugin": "^0.4.2",
+    "rete-profiler-plugin": "^0.2.0",
+    "rete-react-render-plugin": "0.2.0",
+    "rete-task-plugin": "^0.3.0",
+    "sass": "^1.54.5",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3",
+    "styled-components": "^5.3.0",
+    "styled-normalize": "^8.0.7",
+    "tabletop": "^1.6.3"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.13.8",
+    "typescript": "4.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "proxy": "node proxy/index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
