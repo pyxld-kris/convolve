@@ -30,35 +30,46 @@ h1, h2 {
 
 
 .node-editor {
-  background-color: lightgray;
+  background-color: #8a8a8a;
   background-size: "25px 25px";
   background-image: linear-gradient(to right, lightgray 1px, transparent 1px), linear-gradient(to bottom, lightgray 1px, transparent 1px);
   background-color:  darken(gray, 6%);
 }
 
-.node-editor .node {
-  background: #333333;
-  border: 5px solid black;
+.node-editor .node, .node-editor .node:hover {
+  background: #eeeeee;
+  color:black;
+  border: 5px solid transparent;
   border-radius:10px;
+
+  -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.11);
+  -moz-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.11);
+  box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.11);
+}
+.node-editor .node .title {
+  color:black;
+  font-weight:bold;
+}
+.node-editor .node .output-title {
+  color:black;
+}
+.node-editor .node .input-title {
+  color:black;
+}
+.node-editor .node .socket {
+  border: 5px solid rgb(0, 0, 0);
+  background:#dddddd;
 }
 
-.node-editor .node:hover {
-  background: #444444;
-}
 .node-editor .node:active {
   border: 5px solid #ffd252;
 }
 .node-editor .node.selected {
   border: 5px solid #ffd252;
-  background: #444444;
+  background: #ffffff;
 }
 .node-editor .node .title {
   font-size: 1.2em;
-}
-
-.node-editor .node .socket {
-  border: 2px solid black;
-  background:white;
 }
 
 .context-menu {
@@ -75,40 +86,74 @@ h1, h2 {
 
 /* START Specific components */
 
-.node-editor .OnInitialize {
-  background-color: #22cc22;
+.node-editor .OnInitialize, .node-editor .OnInitialize:hover {
+  background-color: #a7d1a7;
 }
-.node-editor .OnInitialize {
-  background-color: #22cc22;
+.node-editor .OnInterval, .node-editor .OnInterval:hover {
+  background-color: #a7d1a7;
 }
-.node-editor .Input {
-  background-color: #22cc22;
+.node-editor .Input, .node-editor .Input:hover {
+  background-color: #a7d1a7;
 }
-.node-editor .Output {
-  background-color: #cc9322;
+.node-editor .Output, .node-editor .Output:hover {
+  background-color: #b9a57e;
+}
+.node-editor .Code, .node-editor .Code:hover {
+  background-color: #343434;
+}.node-editor .Code .title {
+  color:white;
+}.node-editor .Code .input-title {
+  color:white;
+}.node-editor .Code .output-title {
+  color:white;
 }
 
-.node-editor .Module {
-  background-color: #171754;
+
+/* .node-editor .String {
+  background-color: #dfdfdf;
 }
-.node-editor .DebugLog {
-  background-color: #d66561;
+.node-editor .BigString {
+  background-color: #dfdfdf;
+}
+.node-editor .Number {
+  background-color: #dfdfdf;
+} */
+
+.node-editor .Module, .node-editor .Module:hover {
+  background-color: #b3dcba;
+}
+.node-editor .DebugLog, .node-editor .DebugLog:hover {
+  background-color: #e0a6a4;
 }
 
 /* END Specific components */
 
 .node-editor .frame-comment {
   /* background-color:rgba(0,0,0,.3); */
-  background-color:rgba(255,255,255,0.3);
-  border: 10px solid black;
+  background-color:rgba(255, 255, 255, 0.462);
+  border: 10px solid transparent;
   color:black;
 }
 
 .node-editor .inline-comment {
   background-color:rgb(236, 231, 209);
   color:black;
+  border-radius:2px;
+  border:1px solid black;
 }
 
+
+
+.node-editor .connection .main-path {
+  stroke: rgb(255, 255, 255);
+  stroke-width:8px;
+}
+.node-editor .node .control {
+  max-width: 500px;
+}
+.node-editor .node .input {
+  margin-top:5px;
+}
 
 /*
 $grid-size: 20px

@@ -2,7 +2,6 @@ import React from "react";
 import { HashRouter } from "react-router-dom";
 
 import { ThemeProvider } from "styled-components";
-import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import GlobalModal from "./components/modules/GlobalModal";
 import "./styles.css";
@@ -21,7 +20,7 @@ export default function App() {
         <HashRouter>
           <Header />
           <Routes />
-          <Footer />
+          {/* <Footer /> */}
         </HashRouter>
       </ThemeProvider>
     </div>

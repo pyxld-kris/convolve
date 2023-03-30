@@ -28,7 +28,7 @@ export default function Footer() {
               <LogoImageHolder>
                 🧠
               </LogoImageHolder>
-              <LogoWords>AI Garden</LogoWords>
+              <LogoWords>Convolve</LogoWords>
             </a>
           </Link>
         </LogoWrapper>

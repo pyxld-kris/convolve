@@ -2,9 +2,7 @@ import React from "react";
 import { Route, Switch, useHistory, useLocation } from "react-router-dom";
 import "./styles.css";
 
-import ModuleCollectionPage from "./pages/ModuleCollectionPage";
-import ModulePage from "./pages/ModulePage";
-import WelcomePage from "./pages/WelcomePage";
+import PromptEditingPage from "./pages/PromptEditingPage";
 
 export default function App() {
   const location = useLocation();
@@ -27,19 +25,7 @@ export default function App() {
 
   return (
     <Switch>
-      <Route exact path="/" component={WelcomePage} />
-      <Route
-        exact
-        path="/modules/:path1?/:path2?/:path3?/:path4?/:path5?/:path6?/:path7?/:path8?"
-        component={ModuleCollectionPage}
-        //key={Date.now()}
-      />
-      <Route
-        exact
-        path="/module/:moduleName"
-        component={ModulePage}
-        //key={Date.now()}
-      />
+      <Route exact path="/" component={PromptEditingPage} />
     </Switch>
   );
 }

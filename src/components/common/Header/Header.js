@@ -25,22 +25,12 @@ export default function Header() {
           <Link to="/" replace>
             <a>
               <LogoImageHolder>🧠</LogoImageHolder>
-              <LogoWords>AI Garden</LogoWords>
+              <LogoWords>Convolve</LogoWords>
             </a>
           </Link>
         </LogoWrapper>
       </Logo>
       <HeaderNav>
-        <Link to="/" replace>
-          <a>
-            <NavEntry>HOME</NavEntry>
-          </a>
-        </Link>
-        <Link to="/documentation" replace>
-          <a>
-            <NavEntry>DOCS</NavEntry>
-          </a>
-        </Link>
       </HeaderNav>
       <div />
       <HamburgerMenu />

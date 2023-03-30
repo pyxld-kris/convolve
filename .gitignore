@@ -4,6 +4,8 @@ logs
 **/*.backup.*
 **/*.back.*
 
+proxy
+build
 node_modules
 bower_components
 

@@ -1,65 +1,39 @@
-# AI Garden
+# CONVOLVE
 
-# Strand? Fiber? Thread?
+NOTE: This is a proof of concept! The usefulness or user friendliness of this interface and feature set has not been tested in any meaningful way.
 
-Creating and Connecting Neaural Modules
+## Intro 
 
-Repository for AI Garden
+Convolve is intended to function as a platform that allows you to design conversations with chatbots, with the intention of "calibrating" conversations towards particular moments. Currently, the technology that drives AI isn't very good at having long conversations. It's GREAT, however, at having short ones!
 
-// TODO: Fix onend in 1538.300048828125 seconds. in TextToSpeech Component
+Convolve is intended to  make it simple to "chat" with a group of subject master experts on anything! The goal is to create a wealth of helpful guidance, content generation, and eventually task completion  all delivered to you through an interface you're intimately familiar with: chatting. You create a "hive" of agents to carry out more complex thoughts and tasks.
 
-// TODO: Make TextToSpeech node send signal after speaking is done
-// TODO:Output more data from SpeechToText Node (text, confidence level, etc)
+## Concept
 
-// TODO: Energy levels in assistant AI prompt
+After playing with a series of text generating models, attempting to create some new fun and novel experiences and tools, I quickly found the things that these models were really amazing at, along with the things they weren't so great with. I played with small models (GPTJ, because being able to run a model locally is awesome!), all the way up to the most powerful I was able to hook into (thank you for Bloom, Hugging Face). This was a bit *before* ChatGPT's release, but at that point it wasn't a crazy idea that designing prompts as conversations was something these models took to really well. It was very apparent, though, that issues with context limitations were impacting the usefulness there, as it has in many other applications I've played with.
 
-// TODO: MAKE EVAL SAFER IN CODE NODE
+Throughout toying with different ways to both make these models more useful, along with experiments in addressing context limitations, a couple of divergergent ideas converged into a new concept I have employed in Convolve: an idea I was calling "Agent Based Programming". Sort of like OOP, but with agents. As it turns out, there's a lot of material to be found on similar concepts. Agent Oriented Programming and Agent Based Modeling are two big pieces that I've spent time drawing inspiration from in the design of this system. BUT, I'm not a researcher or math genius. I'm a guy who loves software and designing applications, so I've decided to explore this area in terms of design and usability. How might we intentionally design these agent based relationships, leveraging the immense power of these LLMs, solve more complex problems than might otherwise be able to be solved with "rudimentary" single token completion, through  an interface that we're familiar with? This repo holds the result of that exploration.
 
-// TODO: Ti input nodes to be callable via a REST HTTP request
-// TODO: Organize modules into folders
-// TODO: re-order Inputs and Outputs based on y positions
-// TODO: Add visual data-frame type controls that can be used on a DataFrame Node
+## Using Convolve
 
-## NODE TYPES
+The interface for convolve has been more or less modeled off of a Discord/Slack chat-like interaction, with the notable differences being that:
+ - You're chatting with "bots"
+ - You're able to edit the entire history of a chat log at any point in time, generate a replacement message, delete a specific message, or remove a participant (and then generate a new message or re-generate the most recent message)
+ - Any participant can be "brought into a private chat" where you are able to, similarly, have a fully configurable conversation in order to influence how you'd like that participant to respond to *future* messages in a group setting
+ - Settings for individual participants are able to be calibrated such as how "creative" they are, other participants they "pay attentiont to", and particpants who will trigger them into responding.
+ - Chatters generate *three* possible new messages, and you select which fits your outcome the most
 
-// TODO: OCR node
-// TODO: Emotional classification
-// TODO: Grammar correction
-// TODO: Speech recognition
-// TODO: Splitting music into tracks (Demucs)
-// TODO: GLIDE Inpaint
-// TODO: Knowledge graphs?
-// TODO: Pipeline Visualizer?
-// TODO: Keyphrase extraction
-// TODO: ClipnCrop
+## Future Features
 
-## GENERAL
+Right now, this system is great at generating ideas. However, the agents can't perform any meaningful work or take actions. After through testing to get a feel for how reliable and safe these interactions are, I would like to introduce new "worker" agents able to carry out tasks such as fetching data from APIs, performing units of work through APIs, and even... executing code generated by other agents....? (Or... maybe not, you know. Maybe not.) Along those lines, integrating this tool with another project of mine, AI Garden, which allows output from LLMs to be fed into inputs of other models and other types of operations using a node-based programming tool, is a roadmap item I would be very interested in pursuing. 
 
-// TODO: Save modules to local storage
-// TODO: Make context menu more organized and easier to use
-// TODO: Add ability to check if a module has properly configured inputs and outputs (can be used as a module in a graph)
-// TODO: Fix error with module inputs/outputs updating when things are updated near them in a graph
 
-## USER CUSTOMIZATION
+## Technical
 
-// TODO: Node for requesting and storing specific user data for tuning graphs (Maybe split into two, one for requesting and one for accessing?) (Might be bestter as an even more abstract implementation giving direct access to local storage: how use-case specific do we want to be?)
-// TODO: Node for
+TODO
 
-## PROMPTS/GRAPHS
 
-// TODO: Prompt for distilling the description of a person/user based on lists of entries in different categories (interests, hobbies, job/career/positions, ethnicity/upbringing, music, religion, activity levels/types, books, shows, movies, etc)
+## License
 
-## SOCIAL
+MIT. Do whatever you want.
 
-// TODO: Graph sharing page
-
-## LONG TERM
-
-TODO: Tie nodes/graphs/modules to individual user accounts. Allow people to treat graphs similar to github repos (ability to star, contribute, fork, etc). d
-
----
-
-// TODONE: http request node
-// TODONE: JSON parser/extraction node
-// TODONE: Text2Speech stops working across browser randomly
-// TODONE: Add module functionality to rete graph execution

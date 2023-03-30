@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import logoMonogramImage from "../../../images/logo-monogram.png?webp";
 
 export const HeaderBlock = styled.div`
   background-color: #1c1c1c;
@@ -46,10 +45,7 @@ export const LogoImageHolder = styled.div`
     margin-left: 1vw;
   }
 `;
-export const LogoImage = styled.img.attrs(() => ({
-  src: logoMonogramImage,
-  alt: "logo",
-}))`
+export const LogoImage = styled.div`
   display: inline-block;
   width: 100%;
 `;
@@ -101,9 +97,7 @@ export const SignInArea = styled.div`
     display: none;
   }
 `;
-export const UserProfilePic = styled.img.attrs(() => ({
-  alt: "profile-pic",
-}))`
+export const UserProfilePic = styled.div`
   max-height: 3rem;
   min-height: 2rem;
   height: 5vw;
