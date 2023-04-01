@@ -4,6 +4,8 @@ NOTE: This is a proof of concept! The usefulness or user friendliness of this in
 
 ## Intro 
 
+What if you could put 10 ChatGPTs in a room together, give them all different jobs, and have them work together to tackle specific tasks?
+
 Convolve is a React application intended to function as a platform that allows you to design conversations with chatbots, with the intention of "calibrating" conversations towards particular moments. Currently, the technology that drives AI isn't very good at having long conversations. It's GREAT, however, at having short ones!
 
 Convolve is intended to  make it simple to "chat" with a group of subject master experts on anything! The goal is to create a wealth of helpful guidance, content generation, and eventually task completion  all delivered to you through an interface you're intimately familiar with: chatting. You create a "hive" of agents to carry out more complex thoughts and tasks.
