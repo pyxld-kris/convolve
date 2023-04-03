@@ -7,7 +7,7 @@
     "react",
     "starter"
   ],
-  "homepage": "https://idea.devlaunchers.com/",
+  "homepage": "https://krisgano.com/ai-garden/",
   "main": "src/index.js",
   "dependencies": {
     "@banana-dev/banana-dev": "^3.0.0",
