@@ -7,7 +7,7 @@
     "react",
     "starter"
   ],
-  "homepage": "https://krisgano.com/ai-garden/",
+  "homepage": "https://krisgano.com/convolve/",
   "main": "src/index.js",
   "dependencies": {
     "@banana-dev/banana-dev": "^3.0.0",
