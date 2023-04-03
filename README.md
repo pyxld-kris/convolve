@@ -10,6 +10,8 @@ Convolve is a React application intended to function as a platform that allows y
 
 Convolve is intended to  make it simple to "chat" with a group of subject master experts on anything! The goal is to create a wealth of helpful guidance, content generation, and eventually task completion  all delivered to you through an interface you're intimately familiar with: chatting. You create a "hive" of agents to carry out more complex thoughts and tasks.
 
+![image](https://user-images.githubusercontent.com/46331884/229418662-b8cbafdd-3375-470d-9bac-71e3a9ed4919.png)
+
 ## Concept
 
 After playing with a series of text generating models, attempting to create some new fun and novel experiences and tools, I quickly found the things that these models were really amazing at, along with the things they weren't so great with. I played with small models (GPTJ, because being able to run a model locally is awesome!), all the way up to the most powerful I was able to hook into (thank you for Bloom, Hugging Face). This was a bit *before* ChatGPT's release, but at that point it wasn't a crazy idea that designing prompts as conversations was something these models took to really well. It was very apparent, though, that issues with context limitations were impacting the usefulness there, as it has in many other applications I've played with.
@@ -24,6 +26,8 @@ The interface for convolve has been more or less modeled off of a Discord/Slack 
  - Any participant can be "brought into a private chat" where you are able to, similarly, have a fully configurable conversation in order to influence how you'd like that participant to respond to *future* messages in a group setting
  - Settings for individual participants are able to be calibrated such as how "creative" they are, other participants they "pay attention to", and particpants who will trigger them into responding.
  - Chatters generate *three* possible new messages, and you select the one that fits your desired outcome the most
+ 
+ ![image](https://user-images.githubusercontent.com/46331884/229418362-2eca5b5c-220a-4596-90e8-fc01dbd452bf.png)
 
 ## Future Features
 
