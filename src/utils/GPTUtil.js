@@ -75,7 +75,7 @@ const bloomQuery = async (queryData) => {
 
   if (typeof data === "string") data = JSON.parse(data);
 
-  let result = await axios.post("http://krisgano.com/ai-project-proxy/", data, {
+  let result = await axios.post("https://krisgano.com/ai-project-proxy/", data, {
     headers: {
       "Target-URL": url,
       "Connection-Override": "keep-alive",
