@@ -1,0 +1,30 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2.3.2
+      
+    - name: Do Build
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - run: npm install
+    - run: npm run build
+      env:
+        CI: false
+      
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: krisgano.com
+        username: krisgano@vid-list.com
+        password: ${{ secrets.password }}
+        local-dir: ./build/
+        server-dir: /convolve/
