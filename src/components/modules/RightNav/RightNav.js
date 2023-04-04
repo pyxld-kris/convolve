@@ -83,6 +83,8 @@ export default function RightNav({
             currentChat={currentChat}
             setCurrentChat={setCurrentChat}
             botName={botName}
+            chats={chats}
+            setChats={setChats}
           />
         );
       })}
@@ -90,7 +92,7 @@ export default function RightNav({
   );
 }
 
-function BotSidebarEntry({ currentChat, setCurrentChat, botName }) {
+function BotSidebarEntry({ currentChat, setCurrentChat, botName, chats, setChats }) {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   return (
