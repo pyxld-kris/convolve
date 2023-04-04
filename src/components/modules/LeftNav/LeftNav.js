@@ -25,6 +25,7 @@ export default function LeftNav({
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
+	alignItems: "center",
         overflowX: "hidden",
         overflowY: "scroll",
         fontSize: "1.2rem",
