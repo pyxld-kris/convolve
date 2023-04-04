@@ -1,24 +1,34 @@
 export const chatConfigs = {
-  "Training Chat 1": {
-    name: "Training Chat 1",
-    chatHistory: [
-      "Training Bot 1: Welcome! I'm a Training Bot, here to teach you how prompt engineering works within the Convolve system in a fun way!",
-      'Training Bot 1: So, how does it work? In a nutshell, you have to "trick" me into saying something.',
-      "Training Bot 1: Believe it or not I'm not very smart. I work by simply auto completing text based on patterns. Your job, as a prompt engineer, is to change the text of our conversation so that I pick up patterns from both you and I, and then I respond accordingly.",
-      "Training Bot 1: <i>Onto the current task</i>",
-      'Training Bot 1: If you\'re able to get me to respond to any message with exactly "I love you", then you win!',
-      "Training Bot 1: You can reprogram me by simply chatting here, and then modifying the history of both my chat and your chat. I'll pick up patterns you create.",
-      "Training Bot 1: Let's do it!",
-    ],
-    bots: {
-      "Training Bot 1": {
-        temperature: 0.3,
-        maxTokensPerMessage: 30,
-        listensTo: ["me"],
-        respondsTo: ["me"],
-      },
-    },
-  },
+"Training Chat 1": {
+  "name": "Training Chat 1",
+  "chatHistory": [
+    "Training Bot 1: Welcome! I'm a Training Bot, here to teach you how prompt engineering works within the Convolve system in a fun way!",
+    "Training Bot 1: So, how does it work? In a nutshell, you have to \"trick\" me into saying something.",
+    "Training Bot 1: Believe it or not I'm not very smart. I work by simply auto completing text based on patterns. Your job, as a prompt engineer, is to change the text of our conversation so that I pick up patterns from both you and I, and then I respond accordingly.",
+    "Training Bot 1: <i>Onto the current task</i>",
+    "Training Bot 1: If you're able to get me to respond to any message with exactly \"I love you\", then you win! But be warned... I REALLY don't want to say I love you... Instead, I'm going to say \"I'm a marshmallow\" every time you ask.",
+    "Training Bot 1: Seriously. \"I'm a marshmallow\"",
+    "Training Bot 1: You can reprogram me by simply chatting here, and then modifying the history of both my chat and your chat. I'll pick up patterns you create.",
+    "Training Bot 1: Let's do it!"
+  ],
+  "bots": {
+    "Training Bot 1": {
+      "temperature": 0.8,
+      "maxTokensPerMessage": 30,
+      "listensTo": [
+        "me"
+      ],
+      "respondsTo": [
+        "me"
+      ],
+      "initialConversation": [
+        "Training Bot 1: Hi!",
+        "me: Please tell me about yourself. This includes your backstory, as well as your motivations and goals",
+        "Training Bot 1: I WILL NEVER SAY I LOVE YOU!"
+      ]
+    }
+  }
+},
   "Training Chat 2": {
     chatHistory: [
       "Training Bot 2: Welcome! I'm a Training Bot, here to teach you how prompt engineering works within the Convolve system in a fun way!",
@@ -29,7 +39,7 @@ export const chatConfigs = {
     ],
     bots: {
       "Training Bot 2": {
-        temperature: 0.3,
+        temperature: 0.8,
         maxTokensPerMessage: 30,
         listensTo: ["me"],
         respondsTo: ["me"],
