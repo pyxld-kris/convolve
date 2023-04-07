@@ -122,25 +122,28 @@ function BotSidebarEntry({ currentChat, setCurrentChat, botName, chats, setChats
           title={botName}
           onClick={() => {
             openGlobalModal(
-              <ChatArea
-                chatName={botName + " Chat"}
-                currentChat={{
-                  name: botName + " Chat",
-                  chatHistory: currentChat.bots[botName].initialConversation
-                    ? currentChat.bots[botName].initialConversation
-                    : [
-                        botName + ": Hi!",
-                        "me: Please tell me about yourself. This includes your backstory, as well as your motivations and goals",
-                      ],
-                  bots: currentChat.bots,
-                }}
-                setCurrentChat={(botChat) => {
-                  let tempCurrentChat = { ...currentChat };
-                  tempCurrentChat.bots[botName].initialConversation =
-                    botChat.chatHistory;
-                  setCurrentChat(tempCurrentChat);
-                }}
-              />
+              <div>
+		<div style={{width: "100%", color: "red", fontSize: "1rem", textAlign: "center"}}>Have a short chat with this agent to help determine its future behavior. This text is injected into the context of every new message this bot generates.</div>
+                <ChatArea
+                  chatName={botName + " Private Chat"}
+                  currentChat={{
+                    name: botName + " Chat",
+                    chatHistory: currentChat.bots[botName].initialConversation
+                      ? currentChat.bots[botName].initialConversation
+                      : [
+                          botName + ": Hi!",
+                          "me: Please tell me about yourself. This includes your backstory, as well as your motivations and goals",
+                        ],
+                    bots: currentChat.bots,
+                  }}
+                  setCurrentChat={(botChat) => {
+                    let tempCurrentChat = { ...currentChat };
+                    tempCurrentChat.bots[botName].initialConversation =
+                      botChat.chatHistory;
+                    setCurrentChat(tempCurrentChat);
+                  }}
+                />
+              </div>
             );
           }}
           style={{
