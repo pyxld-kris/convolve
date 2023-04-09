@@ -129,6 +129,7 @@ export default function ChatArea({
         topP: chatter ? chatter.temperature : 0.3 * 1,
         batchSize: 1,
       }),
+/*
       GPTUtil.bloomQuery({
         text: fullText.substring(fullText.length - 3700, fullText.length),
         length: chatter ? chatter.maxTokensPerMessage : 30,
@@ -141,6 +142,7 @@ export default function ChatArea({
         topP: chatter ? chatter.temperature : 0.3 * 1,
         batchSize: 1,
       }),
+*/
     ]);
 
     let tempPossibleTextLines = [...possibleTextLines];
