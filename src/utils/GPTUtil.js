@@ -60,38 +60,42 @@ const eleutherQuery = async (queryData) => {
 };
 
 const bloomQuery = async (queryData) => {
-  let url = "https://api-inference.huggingface.co/models/bigscience/bloom";
-  let data = {
-    inputs: queryData.text,
-    parameters: {
-      seed: parseInt(Math.random() * 2342342),
-      early_stopping: false,
-      length_penalty: 0,
-      max_new_tokens: queryData.length,
-      do_sample: true,
-      top_p: queryData.topP,
-    },
-  };
+  try {
+    let url = "https://api-inference.huggingface.co/models/bigscience/bloom";
+    let data = {
+      inputs: queryData.text,
+      parameters: {
+        seed: parseInt(Math.random() * 2342342),
+        early_stopping: false,
+        length_penalty: 0,
+        max_new_tokens: queryData.length,
+        do_sample: true,
+        top_p: queryData.topP,
+      },
+    };
+  
+    if (typeof data === "string") data = JSON.parse(data);
 
-  if (typeof data === "string") data = JSON.parse(data);
+    let result = await axios.post("https://krisgano.com/ai-project-proxy/", data, {
+      headers: {
+        "Target-URL": url,
+        "Connection-Override": "keep-alive",
+        //"Origin-Override": "https://hf.space",
+        //"Referer-Override": "https://hf.space",
+      },
+    });
 
-  let result = await axios.post("https://krisgano.com/ai-project-proxy/", data, {
-    headers: {
-      "Target-URL": url,
-      "Connection-Override": "keep-alive",
-      //"Origin-Override": "https://hf.space",
-      //"Referer-Override": "https://hf.space",
-    },
-  });
+    console.log(result);
+  
+    if (typeof result === "string") result = JSON.stringify(result);
+    if (result.data) result = result.data;
+  
+    let generatedText = result[0].generated_text;
 
-  console.log(result);
-
-  if (typeof result === "string") result = JSON.stringify(result);
-  if (result.data) result = result.data;
-
-  let generatedText = result[0].generated_text;
-
-  return generatedText.substring(queryData.text.length, generatedText.length);
+    return generatedText.substring(queryData.text.length, generatedText.length);
+  } catch(e) {
+    return "ERROR";
+  }
 };
 
 export default {
