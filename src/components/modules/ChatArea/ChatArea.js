@@ -129,20 +129,17 @@ export default function ChatArea({
         topP: chatter ? chatter.temperature : 0.3 * 1,
         batchSize: 1,
       }),
-/*
-      GPTUtil.bloomQuery({
-        text: fullText.substring(fullText.length - 3700, fullText.length),
-        length: chatter ? chatter.maxTokensPerMessage : 30,
-        topP: chatter ? chatter.temperature : 0.3 * 1,
-        batchSize: 1,
-      }),
-      GPTUtil.bloomQuery({
-        text: fullText.substring(fullText.length - 3700, fullText.length),
-        length: chatter ? chatter.maxTokensPerMessage : 30,
-        topP: chatter ? chatter.temperature : 0.3 * 1,
-        batchSize: 1,
-      }),
-*/
+      // Delay the next call by 5 seconds (service doesn't like concurrent requests being open)
+      new Promise((resolve) => {
+        setTimeout(async () => {
+          resolve(await GPTUtil.bloomQuery({
+            text: fullText.substring(fullText.length - 3700, fullText.length),
+            length: chatter ? chatter.maxTokensPerMessage : 30,
+            topP: chatter ? chatter.temperature : 0.3 * 1,
+            batchSize: 1,
+          }));
+	}, 5000)
+      })
     ]);
 
     let tempPossibleTextLines = [...possibleTextLines];
