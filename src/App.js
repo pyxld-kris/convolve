@@ -27,6 +27,14 @@ React.useEffect(() => {
     What if you could put 10 ChatGPTs in a room together, give them all different jobs, and have them work together to tackle specific tasks? In a nutshell, that's the idea behind Convolve.
   </p>
 	 
+  <p>
+    Bring together Agents to wear different hats, set different goals, and intuitively manage multiple conversational threads all in an interface you're intimately familiar with: the chat window! You have full control over all of the agents in the app, along with the histories tied to each particular conversation. Craft your agents' histories to guide them towards particular moments of insight, and then bundle the moment up and re-use it! 
+  </p>
+	 
+  <p>
+    This tool is unfinished, unstable, and in general disarray as it's the result of intense real time exploration into what a tool like this might look like. Currently, modifications to Agents or Conversations have no permanence and will revert with a page reload. With all that in mind, I hope you enjoy your stay!
+  </p>
+	 
   </div>); 
 }, []);
 
